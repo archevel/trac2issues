@@ -350,7 +350,6 @@ class ImportTickets:
         # Remove bulk-import format stuff that the API can't deal with
         issuedata = copy.deepcopy(out)
         issuedata.pop('creator', None)
-        issuedata.pop('assignee', None)
 
         url = "%s/repos/%s/issues" % (self.github, self.projectPath)
         try:
